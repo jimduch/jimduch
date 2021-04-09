@@ -1,0 +1,79 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="name">Nom</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            required
+            [(ngModel)]="tutorial.name"
+            name="name"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Mot de passe</label>
+          <input
+            class="form-control"
+            id="password"
+            required
+            [(ngModel)]="tutorial.password"
+            name="password"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input
+            class="form-control"
+            id="age"
+            required
+            [(ngModel)]="tutorial.age"
+            name="age"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="famille">Famille</label>
+          <input
+            class="form-control"
+            id="famille"
+            required
+            [(ngModel)]="tutorial.famille"
+            name="famille"
+          />
+        </div>
+        <div class="form-group">
+          <label for="race">Race</label>
+          <input
+            class="form-control"
+            id="race"
+            required
+            [(ngModel)]="tutorial.race"
+            name="race"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="nourriture">Nourriture</label>
+          <input
+            class="form-control"
+            id="nourriture"
+            required
+            [(ngModel)]="tutorial.nourriture"
+            name="nourriture"
+          />
+        </div>
+  
+        <button (click)="saveTutorial()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>pangolin ajouté avec succes</h4>
+        <button class="btn btn-success" (click)="newTutorial()">Add</button>
+      </div>
+    </div>
+  </div>
+  
